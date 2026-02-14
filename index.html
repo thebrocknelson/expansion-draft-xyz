@@ -2,25 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Expansion Draft 2026</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Expansion Draft 2026</title>
+    <style>
+        /* A little bit of styling so it's not just a white wall of text */
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        #draft-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .team-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h3 { border-bottom: 2px solid #333; padding-bottom: 5px; margin-top: 0; }
+        button { width: 100%; text-align: left; padding: 5px; margin: 2px 0; cursor: pointer; }
+        #draft-history { margin-top: 30px; padding: 20px; background: #333; color: white; border-radius: 8px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>2026 Expansion Draft Simulator</h1>
-        <p>Build the next dynasty in Seattle or Las Vegas.</p>
-    </header>
-    
-    <main id="draft-board">
-        <div id="team-selector">
-            <button onclick="startDraft('Seattle')">Draft for Seattle</button>
-            <button onclick="startDraft('Vegas')">Draft for Las Vegas</button>
-        </div>
-    </main>
 
-<script src="rosters.js"></script> 
-<script src="script.js"></script>
-<div id="draft-container"></div>
-<ul id="draft-history"></ul>
+    <h1>NBA Expansion Draft Board</h1>
+    
+    <div id="draft-container"></div>
+
+    <div id="draft-history">
+        <h2>Your Draft Picks</h2>
+        <ul id="history-list"></ul>
+    </div>
+
+    <script src="rosters.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
